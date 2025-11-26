@@ -1,3 +1,6 @@
 {
+  "tasks": {
+    "start": "deno run --unstable-kv --allow-net --allow-env --allow-read main.ts"
+  },
   "unstable": ["kv"]
 }
