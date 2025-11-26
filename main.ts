@@ -1,5 +1,4 @@
 // main.ts - Optimized by Apple Senior Engineer
-import { serve } from "https://deno.land/std@0.182.0/http/server.ts";
 import { format } from "https://deno.land/std@0.182.0/datetime/mod.ts";
 import { setCookie, getCookies } from "https://deno.land/std@0.182.0/http/cookie.ts";
 
@@ -2694,6 +2693,5 @@ async function handler(req: Request): Promise<Response> {
   return new Response("Not Found", { status: 404 });
 }
 
-console.log("🚀 Server running on http://localhost:8000");
 console.log(`🔐 Password Protection: ${ADMIN_PASSWORD ? 'ENABLED ✅' : 'DISABLED ⚠️'}`);
-serve(handler);
+Deno.serve(handler);
